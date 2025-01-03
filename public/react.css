@@ -1,0 +1,237 @@
+/* Réinitialisation de marges et paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corps de la page */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(./private/Assets/imd.jpeg); /* Image d'arrière-plan */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Prend toute la hauteur de la fenêtre */
+  display: flex;
+  justify-content: flex-start; /* Contenu aligné en haut */
+  flex-direction: column;
+  color: #fff;
+  padding-top: 70px; /* Espace sous la navbar */
+}
+
+/* Style du Header (Navbar) */
+header {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Fond légèrement transparent */
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Assure que la navbar reste au-dessus des autres éléments */
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header a, header button {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 15px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+header a:hover, header button:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Search Section */
+.search-section {
+  margin-top: 100px; /* Ajouter un espace pour ne pas être masqué par la navbar */
+  text-align: center;
+}
+
+.search-section input {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  width: 70%;
+  max-width: 500px;
+}
+
+.search-section .tags {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.search-section .tags span {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.search-section .tags span:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Grille de cartes */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Crée 3 colonnes égales */
+  gap: 20px; /* Espacement entre les éléments */
+  max-width: 1200px; /* Largeur maximale de la grille */
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  margin-left: 150px;
+}
+
+/* Style des cartes */
+.card {
+  background-color: rgba(255, 255, 255, 0.9); /* Fond légèrement transparent */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card img {
+  width: 100%; /* La largeur prend toute la largeur disponible de la carte */
+  height: 250px; /* Fixer une hauteur spécifique pour toutes les images */
+  object-fit: cover; /* Remplir l'espace sans déformer l'image */
+  border-radius: 8px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 5px;
+}
+
+.card .freelancer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.card .freelancer img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.card .freelancer span {
+  font-size: 1rem;
+  color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr; /* 2 colonnes */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    grid-template-columns: 1fr; /* 1 colonne */
+  }
+}
+
+/* Footer Section */
+footer {
+  width: 100%;
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1 1 200px;
+  margin: 20px;
+}
+
+.footer-column h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footer-column p, .footer-column ul {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style-type: none;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  color: #ddd;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #ddd;
+}
+
+footer button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 0;  /* Ajouter une marge verticale */
+  width: 200px; /* Définir une largeur fixe pour les boutons */
+}
+
+/* Séparer les boutons "Download" avec un margin-right */
+footer .footer-column button {
+  margin-right: 15px; /* Ajouter de l'espace entre les deux boutons */
+}
+
+footer button:hover {
+  background-color: #45a049;
+}
