@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freelancers - Inspired by Toptal</title>
+  <link rel="stylesheet" href="ui-designing.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <h1> <a href="sidebar.html">Elite Freelancers </a></h1>
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="sidebar.html">Home</a></li>
+          <li><a href="#">Find Talent</a></li>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Hire the Top 3% of Freelance Developers</h2>
+      <p>Access world-class talent for your next big project.</p>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search developers by skills or name..." autocomplete="off">
+        <div id="autocomplete-results" class="autocomplete-results"></div>
+        <button onclick="searchFreelancers()">Search</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Freelancers Section -->
+  <section class="freelancers">
+    <div class="container">
+      <h2>Top Developers</h2>
+      <div class="freelancer-grid" id="freelancerGrid">
+        <!-- Freelancer Cards (8 developers) -->
+        <div class="freelancer-card" data-skills="React, Node.js, MongoDB">
+          <img src="dev1.jpg" alt="Developer 1">
+          <h3>John Doe</h3>
+          <p >Full-Stack Developer</p>
+          <ul class="skills">
+            <li>React</li>
+            <li>Node.js</li>
+            <li>MongoDB</li>
+          </ul>
+          <div class="details">
+            <span>$60/hr</span>
+            <span>⭐⭐⭐⭐⭐</span>
+          </div>
+          <button class="hire-btn">Hire Now</button>
+        </div>
+
+        <div class="freelancer-card" data-skills="Figma, Adobe XD, Sketch">
+          <img src="dev2.jpg" alt="Developer 2">
+          <h3>Jane Smith</h3>
+          <p>UI/UX Designer</p>
+          <ul class="skills">
+            <li>Figma</li>
+            <li>Adobe XD</li>
+            <li>Sketch</li>
+          </ul>
+          <div class="details">
+            <span>$50/hr</span>
+            <span>⭐⭐⭐⭐⭐</span>
+          </div>
+          <button class="hire-btn">Hire Now</button>
+        </div>
+
+        <!-- Add more Freelancer Cards -->
+        <!-- Freelancer 3 -->
+        <div class="freelancer-card" data-skills="Python, Django, Flask">
+          <img src="dev3.jpg" alt="Developer 3">
+          <h3>Michael Johnson</h3>
+          <p>Back-End Developer</p>
+          <ul class="skills">
+            <li>Python</li>
+            <li>Django</li>
+            <li>Flask</li>
+          </ul>
+          <div class="details">
+            <span>$70/hr</span>
+            <span>⭐⭐⭐⭐⭐</span>
+          </div>
+          <button class="hire-btn">Hire Now</button>
+        </div>
+
+        <!-- Freelancer 4 -->
+        <div class="freelancer-card" data-skills="JavaScript, Angular, TypeScript">
+          <img src="dev4.jpg" alt="Developer 4">
+          <h3>Alice Williams</h3>
+          <p>Front-End Developer</p>
+          <ul class="skills">
+            <li>JavaScript</li>
+            <li>Angular</li>
+            <li>TypeScript</li>
+          </ul>
+          <div class="details">
+            <span>$55/hr</span>
+            <span>⭐⭐⭐⭐⭐</span>
+          </div>
+          <button class="hire-btn">Hire Now</button>
+        </div>
+
+        <!-- Freelancer 5 -->
+        <div class="freelancer-card" data-skills="Ruby, Rails, JavaScript">
+          <img src="dev5.jpg" alt="Developer 5">
+          <h3>David Brown</h3>
+          <p>Full-Stack Developer</p>
+          <ul class="skills">
+            <li>Ruby</li>
+            <li>Rails</li>
+            <li>JavaScript</li>
+          </ul>
+          <div class="details">
+            <span>$65/hr</span>
+            <span>⭐⭐⭐⭐⭐</span>
+          </div>
+          <button class="hire-btn">Hire Now</button>
+        </div>
+
+        <!-- Freelancer 6 -->
+        <div class="freelancer-card" data-skills="PHP, Laravel, MySQL">
+          <img src="dev6.jpg" alt="Developer 6">
+          <h3>Emily Davis</h3>
+          <p>Back-End Developer</p>
+          <ul class="skills">
+            <li>PHP</li>
+            <li>Laravel</li>
+            <li>MySQL</li>
+          </ul>
+          <div class="details">
+            <span>$50/hr</span>
+            <span>⭐⭐⭐⭐⭐</span>
+          </div>
+          <button class="hire-btn">Hire Now</button>
+        </div>
+
+        <!-- Freelancer 7 -->
+        <div class="freelancer-card" data-skills="Java, Spring Boot, MySQL">
+          <img src="dev7.jpg" alt="Developer 7">
+          <h3>Robert Lee</h3>
+          <p>Java Developer</p>
+          <ul class="skills">
+            <li>Java</li>
+            <li>Spring Boot</li>
+            <li>MySQL</li>
+          </ul>
+          <div class="details">
+            <span>$80/hr</span>
+            <span>⭐⭐⭐⭐⭐</span>
+          </div>
+          <button class="hire-btn">Hire Now</button>
+        </div>
+
+        <!-- Freelancer 8 -->
+        <div class="freelancer-card" data-skills="Swift, iOS, Objective-C">
+          <img src="dev8.jpg" alt="Developer 8">
+          <h3>Olivia Martinez</h3>
+          <p>Mobile App Developer</p>
+          <ul class="skills">
+            <li>Swift</li>
+            <li>iOS</li>
+            <li>Objective-C</li>
+          </ul>
+          <div class="details">
+            <span>$75/hr</span>
+            <span>⭐⭐⭐⭐⭐</span>
+          </div>
+          <button class="hire-btn">Hire Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Elite Freelancers. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Fonction de filtrage de l'auto-complétion
+    $('#searchInput').on('input', function() {
+      const query = $(this).val().toLowerCase();
+      const results = skills.filter(skill => skill.toLowerCase().includes(query));
+      $('#autocomplete-results').empty();
+      
+      if (results.length > 0) {
+        results.forEach(result => {
+          $('#autocomplete-results').append(`<div class="autocomplete-item">${result}</div>`);
+        });
+        $('#autocomplete-results').show();
+      } else {
+        $('#autocomplete-results').append('<div class="autocomplete-item">No matches found</div>');
+        $('#autocomplete-results').show();
+      }
+    });
+
+    // Ajouter l'événement de sélection dans la liste d'auto-complétion
+    $(document).on('click', '.autocomplete-item', function() {
+      $('#searchInput').val($(this).text());
+      $('#autocomplete-results').empty();
+    });
+
+    // Fonction pour rechercher les freelances
+    function searchFreelancers() {
+      const query = $('#searchInput').val().toLowerCase();
+      const cards = $('.freelancer-card');
+      
+      cards.each(function() {
+        const skills = $(this).data('skills').toLowerCase();
+        if (skills.includes(query)) {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
+      });
+    }
+  </script>
+</body>
+</html>

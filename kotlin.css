@@ -1,0 +1,243 @@
+/* Reset and basic setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f4f4f9;
+  line-height: 1.6;
+}
+
+/* Header Section */
+.hero {
+  background: url('/main_9.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+}
+
+.hero .overlay {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #6200ea;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #3700b3;
+}
+
+/* Intro Section */
+.intro {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.intro h2 {
+  font-size: 2rem;
+  color: #6200ea;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Developers Section */
+.developers {
+  max-width: 1000px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.developers h2 {
+  font-size: 2rem;
+  color: #6200ea;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card {
+  flex: 1 1 calc(33% - 20px);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.stars {
+  font-size: 1.2rem;
+  color: #f39c12;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 1.2rem;
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  background: #6200ea;
+  color: white;
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 1rem;
+  border-top: 2px solid #f39c12;
+}
+
+footer .footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+footer .footer-section {
+  flex: 1;
+  min-width: 220px;
+  padding: 10px;
+}
+
+footer .footer-section h4 {
+  font-size: 1.4rem;
+  color: #f39c12;
+  margin-bottom: 10px;
+}
+
+footer .footer-section p {
+  font-size: 1rem;
+  color: #bdc3c7;
+  line-height: 1.6;
+}
+
+footer .footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .footer-section ul li a {
+  color: #7f8c8d;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+footer .footer-section ul li a:hover {
+  color: #f39c12;
+}
+
+footer .footer-section .social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+footer .footer-section .social-links a {
+  color: #7f8c8d;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+footer .footer-section .social-links a:hover {
+  color: #f39c12;
+}
+
+footer p {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+
+.oo {
+  display: flex;
+  gap: 5%;
+  color: #7f8c8d;
+  
+  
+}
+
+
+ .oo i{
+  color: black;
+  margin-left: 38%;
+    width: 135%;
+    height: 188%;
+ }
