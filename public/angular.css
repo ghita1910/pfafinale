@@ -1,0 +1,216 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Header Neon Style */
+.neon-hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  color: #fff;
+  overflow: hidden;
+}
+
+.neon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.neon-content {
+  z-index: 2;
+}
+
+.glow-title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+}
+
+.glow-text {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+}
+
+.neon-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #0ff;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.neon-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #0ff, 0 0 30px #0ff;
+}
+
+/* Section Explore */
+.explore-section {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.neon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.neon-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  text-align: center;
+}
+
+.neon-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.neon-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+/* Freelancers Section */
+.freelancers-section {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: #1a2a6c;
+  color: #fff;
+}
+
+.freelancers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.freelancer-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.freelancer-card:hover {
+  transform: scale(1.05);
+}
+
+.freelancer-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.freelancer-name {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+.freelancer-role {
+  font-size: 1rem;
+  color: #ddd;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+}
+
+/* Call-to-Action Section */
+.cta-section {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, #fdbb2d, #b21f1f, #1a2a6c);
+}
+
+.cta-title {
+  font-size: 2rem;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 30px;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+  background: #0ff;
+  color: #000;
+}
+
+/* Footer */
+.neon-footer {
+  background: #111;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #fff;
+}
+
+.neon-footer nav {
+  margin-top: 1rem;
+}
+
+.neon-footer a {
+  margin: 0 10px;
+  color: #0ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.neon-footer a:hover {
+  color: #fff;
+}
