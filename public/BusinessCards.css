@@ -1,0 +1,470 @@
+body {
+    
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-image: url(back.jpg);
+    background-size: cover; /* Ensures the image covers the page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    margin-top: 80px;
+    
+  
+}
+
+a{
+  display:flex;
+  text-decoration: none;
+  
+}
+
+header {
+    background: linear-gradient(to right, #0a0a0a, #777780);
+    
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000;
+    
+}
+
+.Result{
+    font-size: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1800px; /* Centers the content */
+    margin: 0 auto;
+}
+
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+header h3 {
+    margin: 0;
+    font-size: 0.9em;
+    margin-right: 5px;
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+
+}
+
+header h2 {
+    margin: 0;
+    font-size: 2em;
+    margin-right: 5px;
+    color: rgb(132, 224, 124);
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+.search-bar {
+    display: flex;
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+.search-bar input {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    border: none;
+    background-color: rgb(80, 107, 77);
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: rgb(181, 206, 179);
+}
+
+.search-bar input::placeholder {
+    color: #aaa; /* Placeholder text color */
+    font-style: italic;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.auth-buttons .join {
+    border: 2px solid #4CAF50;
+    background-color: white;
+    color: #4CAF50;
+}
+
+.auth-buttons .join:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Sort Section */
+.sort-section {
+    padding-top: 56px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 1300px; /* Keeps the layout centered */
+    margin: 0 auto;
+}
+
+.sort-section label {
+    margin-right: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+}
+
+.sort-select {
+    padding: 8px 15px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.sort-select:hover {
+    border-color: #4CAF50;
+}
+
+main {
+    padding: 20px;
+}
+
+.freelancers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1300px; /* Keeps the layout centered */
+    margin: 0 auto; /* Centers the grid on the page */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+}
+
+/* Preserving Original .freelancer Styles */
+.freelancer {
+    background-image: url(fff.jpg);
+    border-radius: 10px;
+    text-align: center;
+    background-size: cover; /* Ensures the image covers the page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    position: relative; /* Needed for the flip effect */
+    perspective: 1000px; /* Add perspective for the flip */
+}
+
+.freelancer-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    height: 450px;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.freelancer:hover .freelancer-inner {
+    transform: rotateY(180deg);
+}
+
+.freelancer-front,
+.freelancer-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+/* Front Side of the Card */
+.freelancer-front {
+    background-image: url(jj.jpg);
+    background-size: cover; /* Ensures the image covers the page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: rgb(3, 2, 2) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Back Side of the Card */
+.freelancer-back {
+    background-image: url(jj.jpg);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+  
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the container */
+}
+
+/* Profile Image */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid rgb(0, 0, 0); /* Adds a border around the image */
+    margin-top: -60px; /* Pushes the image upwards */
+    z-index: 1; /* Makes sure the image is on top of the banner */
+}
+
+
+
+.freelancer h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.freelancer p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.freelancer .price,
+.freelancer .rating {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+}
+
+.freelancer button {
+    background-color: #0c0c0c;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 100px;
+
+}
+
+.freelancer button:hover {
+    background-color: #343434;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    padding: 10px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #fffafa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.pagination a:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/*-----------------------------------------*/
+.flip-card {
+    background-color: transparent;
+    width: 190px;
+    height: 254px;
+    perspective: 1000px;
+    font-family: sans-serif;
+  }
+  
+  .title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid coral;
+    border-radius: 1rem;
+  }
+  
+  .flip-card-front {
+
+    color: coral;
+  }
+  
+  .flip-card-back {
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+
+body{
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+}
+
+*{
+
+  box-sizing: border-box;
+}
+.container{
+  max-width: 1170px;
+  margin:auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style: none;
+}
+.footer{
+   background: linear-gradient(to right, #0a0a0a, #777780);
+    padding: 40px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  left: 20px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:105px;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{  
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin:0 10px 10px 0;
+  
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+  color: #24262b;
+  background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
