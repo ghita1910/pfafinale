@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demande d'Achat de Composants Electroniques</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Demande d'Achat de Composants Electroniques</h1>
+  </header>
+
+  <section class="product-container">
+    <!-- Produit 1 -->
+    <div class="product-card">
+      <img src="./img 1/closeup-electronic-hardware-resistor-circuit-board_9635-1078.avif" alt="Composant 1">
+      <div class="product-info">
+        <p><strong>Référence :</strong> C1-123</p>
+        <p><strong>Description :</strong> Résistance 100Ω</p>
+        <p><strong>Prix :</strong> 1.50€</p>
+      </div>
+      <button class="purchase-button" onclick="demanderAchat('C1-123')">Demander un Achat</button>
+    </div>
+
+    <!-- Produit 2 -->
+    <div class="product-card">
+      <img src="./img 1/2.jfif" alt="Composant 2">
+      <div class="product-info">
+        <p><strong>Référence :</strong> C2-456</p>
+        <p><strong>Description :</strong> Condensateur 10µF</p>
+        <p><strong>Prix :</strong> 2.00€</p>
+      </div>
+      <button class="purchase-button" onclick="demanderAchat('C2-456')">Demander un Achat</button>
+    </div>
+
+    <!-- Produit 3 -->
+    <div class="product-card">
+      <img src="./img 1/3.jfif" alt="Composant 3">
+      <div class="product-info">
+        <p><strong>Référence :</strong> C3-789</p>
+        <p><strong>Description :</strong> Diode LED</p>
+        <p><strong>Prix :</strong> 0.80€</p>
+      </div>
+      <button class="purchase-button" onclick="demanderAchat('C3-789')">Demander un Achat</button>
+    </div>
+
+    <!-- Produit 4 -->
+    <div class="product-card">
+      <img src="./img 1/4.jfif" alt="Composant 4">
+      <div class="product-info">
+        <p><strong>Référence :</strong> C4-012</p>
+        <p><strong>Description :</strong> Transistor NPN</p>
+        <p><strong>Prix :</strong> 1.20€</p>
+      </div>
+      <button class="purchase-button" onclick="demanderAchat('C4-012')">Demander un Achat</button>
+    </div>
+
+    <!-- Produit 5 -->
+    <div class="product-card">
+      <img src="./img 1/5.jpg" alt="Composant 5">
+      <div class="product-info">
+        <p><strong>Référence :</strong> C5-345</p>
+        <p><strong>Description :</strong> Microcontrôleur Arduino</p>
+        <p><strong>Prix :</strong> 8.00€</p>
+      </div>
+      <button class="purchase-button" onclick="demanderAchat('C5-345')">Demander un Achat</button>
+    </div>
+
+    <!-- Produit 6 -->
+    <div class="product-card">
+      <img src="./img 1/6.jpg" alt="Composant 6">
+      <div class="product-info">
+        <p><strong>Référence :</strong> C6-567</p>
+        <p><strong>Description :</strong> Capteur de température</p>
+        <p><strong>Prix :</strong> 3.50€</p>
+      </div>
+      <button class="purchase-button" onclick="demanderAchat('C6-567')">Demander un Achat</button>
+    </div>
+
+    <!-- Produit 7 -->
+    <div class="product-card">
+      <img src="./img 1/7.jfif" alt="Composant 7">
+      <div class="product-info">
+        <p><strong>Référence :</strong> C7-890</p>
+        <p><strong>Description :</strong> Moteur DC</p>
+        <p><strong>Prix :</strong> 5.00€</p>
+      </div>
+      <button class="purchase-button" onclick="demanderAchat('C7-890')">Demander un Achat</button>
+    </div>
+
+    <!-- Produit 8 -->
+    <div class="product-card">
+      <img src="./img 1/8.jfif" alt="Composant 8">
+      <div class="product-info">
+        <p><strong>Référence :</strong> C8-234</p>
+        <p><strong>Description :</strong> Relais 5V</p>
+        <p><strong>Prix :</strong> 2.50€</p>
+      </div>
+      <button class="purchase-button" onclick="demanderAchat('C8-234')">Demander un Achat</button>
+    </div>
+  </section>
+
+  <script>
+    // Fonction appelée lors de la demande d'achat
+    function demanderAchat(reference) {
+      alert("Demande d'achat pour le produit " + reference);
+      window.location.href = 'http://127.0.0.1:5000' ; // Ajouter un '/' entre l'URL et la référence
+    }
+  </script>
+</body>
+</html>
