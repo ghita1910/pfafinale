@@ -1,0 +1,215 @@
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+
+p{
+  text-align: center;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  background-color: #003366;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.header .nav-bar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+}
+
+.header .nav-bar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.header .nav-bar a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background: url('appmob.jpg') no-repeat center center/cover;
+  color: #f0f0f0;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+}
+
+.hero .search-bar {
+  margin-top: 20px;
+  position: relative;
+}
+
+.hero input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.hero button {
+  padding: 10px 20px;
+  background: #003366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.hero button:hover {
+  background: #002244;
+}
+
+/* Autocomplete Results */
+.autocomplete-results {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.autocomplete-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.autocomplete-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Freelancer Cards */
+.freelancers {
+  padding: 40px 0;
+  background-color: white;
+}
+
+.freelancer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.freelancer-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.freelancer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for image */
+.freelancer-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Freelancer Card Content */
+.freelancer-card .content {
+  padding: 15px;
+  flex-grow: 1;
+}
+
+.freelancer-card h3 {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.freelancer-card .skills {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+  padding: 0;
+}
+
+.freelancer-card .skills li {
+  background: #e0e0e0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+/* Freelancer Card Details */
+.freelancer-card .details {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.freelancer-card .hire-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background: #003366;
+  color: white;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  cursor: pointer;
+}
+
+.freelancer-card .hire-btn:hover {
+  background: #002244;
+}
+
+/* Footer */
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+.header .logo a {
+  text-decoration: none;
+  color: white
+}
