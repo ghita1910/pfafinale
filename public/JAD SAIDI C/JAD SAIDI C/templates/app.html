@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/logout">Logout</a>
+        </nav>
+    </header>
+    <main>
+        <h1>My Products</h1>
+
+        <!-- Formulaire de recherche -->
+        <form action="/product/search" method="get">
+            <input type="text" name="reference" placeholder="Search by Reference" required />
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Formulaire d'ajout -->
+        <form action="/product/add" method="post">
+            <input type="text" name="reference" placeholder="Reference" required />
+            <input type="text" name="description" placeholder="Description" required />
+            <input type="number" name="price" step="0.01" placeholder="Price" required />
+            <input type="number" name="quantity" placeholder="Quantity" required />
+            <button type="submit">Add Product</button>
+        </form>
+
+        <!-- Tableau des produits -->
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Reference</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for product in products %}
+                <tr>
+                    <td>{{ product.reference }}</td>
+                    <td>{{ product.description }}</td>
+                    <td>{{ product.price }}</td>
+                    <td>{{ product.quantity }}</td>
+                    <td>
+                        <!-- Formulaire de mise à jour -->
+                        <form action="/product/update/{{ product.reference }}" method="post" style="display: inline;">
+                            <input type="text" name="description" placeholder="New Description" required />
+                            <input type="number" name="price" step="0.01" placeholder="New Price" required />
+                            <input type="number" name="quantity" placeholder="New Quantity" required />
+                            <button class="update" type="submit">Update</button>
+                        </form>
+
+                        <!-- Formulaire de suppression -->
+                        <form action="/product/delete/{{ product.reference }}" method="post" style="display: inline;">
+                            <button class="delete" type="submit">Delete</button>
+                        </form>
+                        
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

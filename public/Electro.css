@@ -1,0 +1,212 @@
+/* Styles Généraux pour tout le document */
+body {
+  margin: 0; /* Supprime les marges par défaut du corps de la page */
+  font-family: 'Arial', sans-serif; /* Définit la police principale utilisée sur la page */
+  background-color: #f4f8fb; /* Applique un fond de couleur bleu très clair */
+  color: #333; /* Définit la couleur du texte en gris foncé */
+}
+
+h1, h2, h3 {
+  margin: 0; /* Supprime les marges par défaut des titres */
+}
+
+a {
+  text-decoration: none; /* Supprime le soulignement des liens */
+  color: inherit; /* Applique la couleur du texte parent aux liens */
+}
+
+/* HEADER (En-tête de la page) */
+.header {
+  display: flex; /* Utilise le modèle Flexbox pour aligner les éléments */
+  justify-content: space-between; /* Sépare les éléments horizontalement */
+  align-items: center; /* Centre les éléments verticalement */
+  background-color: #2a3d66; /* Définit une couleur de fond bleu foncé */
+  color: #fff; /* Applique une couleur blanche au texte */
+  padding: 10px 20px; /* Ajoute des espacements internes (haut/bas: 10px, gauche/droite: 20px) */
+}
+
+.header .logo {
+  font-size: 1.5rem; /* Définit une taille de police importante pour le logo */
+  font-weight: bold; /* Applique un texte en gras pour le logo */
+}
+
+.header nav ul {
+  list-style: none; /* Supprime les puces des listes les nombres  */ 
+  display: flex; /* Dispose les éléments en ligne grâce à Flexbox */
+  gap: 20px; /* Ajoute un espacement de 20px entre les éléments */
+}
+
+.header nav ul li a {
+  color: #fff; /* Définit la couleur blanche pour les liens */
+  transition: color 0.3s; /* Ajoute une transition fluide sur la couleur */
+}
+
+.header nav ul li a:hover {
+  color: #f0a500; /* Change la couleur en jaune au survol */
+}
+
+.header .auth-buttons button {
+  margin-left: 10px; /* Ajoute un espacement à gauche entre les boutons */
+  padding: 6px 12px; /* Définit un espacement interne pour les boutons */
+  font-size: 1rem; /* Définit une taille de police standard */
+  color: #2a3d66; /* Applique une couleur de texte bleu foncé */
+  background-color: #fff; /* Définit une couleur de fond blanche */
+  border: 1px solid #2a3d66; /* Ajoute une bordure fine de couleur bleu foncé */
+  border-radius: 4px; /* Arrondit légèrement les coins */
+  cursor: pointer; /* Change le curseur en une main au survol */
+}
+
+.header .auth-buttons button:hover {
+  background-color: #f0a500; /* Change le fond en jaune au survol */
+  color: #fff; /* Change la couleur du texte en blanc */
+}
+
+/* HERO SECTION (Bandeau principal) */
+.hero {
+  position: relative; /* Permet de positionner les éléments enfants avec des valeurs absolues */
+  text-align: center; /* Centre le texte horizontalement */
+  padding: 60px 20px; /* Ajoute des marges internes (haut/bas: 60px, gauche/droite: 20px) */
+  color: #fff; /* Applique une couleur blanche au texte */
+}
+
+.hero-video {
+  position: absolute; /* Place la vidéo en position absolue par rapport au conteneur */
+  top: 0; /* Positionne la vidéo au bord supérieur */
+  left: 0; /* Positionne la vidéo au bord gauche */
+  width: 100%; /* Étire la vidéo sur toute la largeur */
+  height: 100%; /* Étire la vidéo sur toute la hauteur */
+  object-fit: cover; /* Couvre tout l'espace sans déformer la vidéo */
+  z-index: -1; /* Place la vidéo derrière les autres éléments */
+}
+
+.hero h1 {
+  font-size: 2.5rem; /* Définit une grande taille pour le titre */
+  margin-bottom: 10px; /* Ajoute un espacement en bas du titre */
+  z-index: 1; /* S'assure que le titre reste au-dessus de la vidéo */
+}
+
+.hero p {
+  font-size: 1.2rem; /* Définit une taille de texte moyenne pour le paragraphe */
+  margin-bottom: 20px; /* Ajoute un espacement en bas du paragraphe */
+  z-index: 1; /* Garde le texte au-dessus de la vidéo */
+}
+
+.hero .cta-button {
+  background-color: #f0a500; /* Définit une couleur de fond jaune */
+  color: #fff; /* Définit une couleur de texte blanche */
+  padding: 10px 20px; /* Ajoute des marges internes */
+  border: none; /* Supprime la bordure par défaut */
+  border-radius: 5px; /* Arrondit les coins légèrement */
+  font-size: 1rem; /* Définit une taille de texte standard */
+  cursor: pointer; /* Change le curseur au survol */
+  z-index: 1; /* Positionne le bouton au-dessus de la vidéo */
+}
+
+.hero .cta-button:hover {
+  background-color: #e08900; /* Change la couleur de fond en jaune foncé au survol */
+}
+
+/* SECTION DES EXPERTS (Cartes de présentation) */
+.experts-container {
+  display: grid; /* Utilise une grille pour disposer les cartes */
+  grid-template-columns: repeat(3, 1fr); /* Définit trois colonnes de taille égale */
+  gap: 20px; /* Ajoute un espacement de 20px entre les éléments */
+  padding: 40px 20px; /* Ajoute des marges internes */
+  background-color: #fff; /* Applique un fond blanc */
+}
+
+.expert-card {
+  background-color: #f9fafc; /* Applique un fond gris très clair */
+  border-radius: 8px; /* Arrondit les coins de la carte */
+  overflow: hidden; /* Cache les éléments qui débordent */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile à la carte */
+  text-align: center; /* Centre le texte */
+}
+
+.expert-card img {
+  width: 100%; /* Étire l'image sur toute la largeur de la carte */
+  height: 200px; /* Définit une hauteur fixe */
+  object-fit: cover; /* Maintient les proportions de l'image */
+}
+
+.expert-card h3 {
+  margin: 10px 0; /* Ajoute des marges haut et bas */
+  font-size: 1.2rem; /* Définit une taille moyenne pour le titre */
+  color: #2a3d66; /* Applique une couleur bleu foncé */
+}
+
+.expert-card p {
+  font-size: 0.9rem; /* Définit une taille plus petite pour le texte */
+  margin: 5px 0; /* Ajoute des marges autour */
+}
+
+.expert-card .buy-button {
+  margin: 10px 0; /* Ajoute des marges haut et bas */
+  padding: 8px 16px; /* Ajoute des marges internes */
+  background-color: #2a3d66; /* Applique un fond bleu foncé */
+  color: #fff; /* Définit une couleur blanche pour le texte */
+  border: none; /* Supprime la bordure par défaut */
+  border-radius: 4px; /* Arrondit les coins */
+  cursor: pointer; /* Change le curseur au survol */
+}
+
+.expert-card .buy-button:hover {
+  background-color: #f0a500; /* Change la couleur de fond en jaune au survol */
+}
+
+/* Continue avec les autres sections de manière similaire... */
+/* SECTION APPEL À L'ACTION (Call to Action) */
+.cta-section {
+  text-align: center; /* Centre tout le contenu horizontalement */
+  padding: 50px 20px; /* Ajoute des marges internes (haut/bas: 50px, gauche/droite: 20px) */
+  background-color: #2a3d66; /* Applique un fond bleu foncé */
+  color: #fff; /* Définit la couleur blanche pour le texte */
+}
+
+.cta-section h2 {
+  font-size: 1.8rem; /* Définit une taille importante pour le titre */
+  margin-bottom: 10px; /* Ajoute un espacement en bas du titre */
+}
+
+.cta-section p {
+  font-size: 1rem; /* Définit une taille standard pour le paragraphe */
+  margin-bottom: 20px; /* Ajoute un espacement en bas du paragraphe */
+}
+
+.cta-section .cta-button {
+  background-color: #f0a500; /* Applique une couleur de fond jaune */
+  color: #fff; /* Applique une couleur blanche au texte */
+  padding: 10px 20px; /* Ajoute des marges internes (haut/bas: 10px, gauche/droite: 20px) */
+  border: none; /* Supprime la bordure par défaut */
+  border-radius: 5px; /* Arrondit légèrement les coins */
+  font-size: 1rem; /* Définit une taille de texte standard */
+  cursor: pointer; /* Change le curseur au survol */
+}
+
+/* FOOTER (Pied de page) */
+.footer {
+  text-align: center; /* Centre le texte horizontalement */
+  padding: 10px; /* Ajoute un espacement interne de 10px */
+  background-color: #2a3d66; /* Définit une couleur de fond bleu foncé */
+  color: #fff; /* Définit la couleur blanche pour le texte */
+  margin-top: 20px; /* Ajoute un espacement externe au-dessus du pied de page */
+}
+
+/* CARTES AVEC UN TITRE SUR L'IMAGE (Front Card) */
+.card-front h3 {
+  position: absolute; /* Positionne le titre de façon absolue par rapport au conteneur parent */
+  bottom: 15px; /* Place le titre à 15px du bas du conteneur */
+  left: 10px; /* Place le titre à 10px du bord gauche */
+  color: #fff; /* Applique une couleur blanche au texte */
+  background-color: rgba(0, 0, 0, 0.7); /* Applique un fond noir semi-transparent */
+  padding: 5px 12px; /* Ajoute des marges internes au titre */
+  border-radius: 4px; /* Arrondit légèrement les coins */
+}
+
+/* CONTAINER (Dispositif général pour la mise en page) */
+.container {
+  display: grid; /* Utilise une grille pour disposer les éléments */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Crée des colonnes adaptatives */
+  gap: 25px; /* Ajoute un espacement de 25px entre les éléments */
+  padding: 30px; /* Ajoute des marges internes autour du conteneur */
+}

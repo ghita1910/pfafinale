@@ -1,0 +1,25 @@
+#GET http://127.0.0.1:5000/ HTTP/1.1
+
+#GET http://127.0.0.1:5000/profile?age=30 HTTP/1.1
+GET http://127.0.0.1:5000/card HTTP/1.1
+GET http://127.0.0.1:5000/search/P002 HTTP/1.1
+GET http://127.0.0.1:5000/card/search HTTP/1.1
+
+GET http://127.0.0.1:5000/error HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+
+ref=P001
+
+POST http://127.0.0.1:5000/card/add HTTP/1.1
+Content-Type: application/json
+
+{
+        "description": "DEll inventro",
+        "price": 7000,
+        "ref": "P002"
+}
+
+POST http://127.0.0.1:5000/auth HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+login=esisa@ac.ma&password=1234 
+
