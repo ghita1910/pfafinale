@@ -1,0 +1,243 @@
+/* Général */
+body {
+  margin: 0; /* Supprime les marges par défaut du corps */
+  font-family: Arial, sans-serif; /* Définit la police globale */
+  background-color: #f9f9f9; /* Couleur de fond du site */
+  color: #333; /* Couleur par défaut du texte */
+}
+
+/* Header */
+.header {
+  position: relative; /* Position relative pour contenir les éléments enfants */
+  width: 100%; /* Largeur totale de l'écran */
+  height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
+  overflow: hidden; /* Empêche le débordement de la vidéo */
+}
+
+.header-video {
+  position: absolute; /* Positionne la vidéo en absolu par rapport au header */
+  top: 0; /* Alignement en haut */
+  left: 0; /* Alignement à gauche */
+  width: 100%; /* Largeur totale du header */
+  height: 100%; /* Hauteur totale du header */
+  object-fit: cover; /* Adapte la vidéo pour couvrir toute la zone sans déformation */
+  z-index: -1; /* Place la vidéo en arrière-plan */
+}
+
+.header-content {
+  position: absolute; /* Position absolue pour superposer sur la vidéo */
+  top: 0; /* Alignement en haut */
+  left: 0; /* Alignement à gauche */
+  width: 100%; /* Largeur totale du header */
+  height: 100%; /* Hauteur totale du header */
+  display: flex; /* Utilise un conteneur flex */
+  flex-direction: column; /* Organise les éléments en colonne */
+  justify-content: space-between; /* Espace égal entre les éléments */
+  padding: 20px; /* Espacement interne autour du contenu */
+  z-index: 1; /* Place le contenu au-dessus de la vidéo */
+  color: white; /* Texte blanc */
+}
+
+.top-bar {
+  display: flex; /* Utilise un conteneur flex pour la barre supérieure */
+  justify-content: space-between; /* Espace entre les éléments */
+  align-items: center; /* Centre les éléments verticalement */
+  width: 100%; /* Largeur totale */
+}
+
+.top-bar h1 {
+  font-size: 2rem; /* Taille du texte du titre */
+  color: white; /* Couleur du texte */
+}
+
+.top-bar span {
+  font-size: 1.2rem; /* Taille du texte pour le span */
+  font-weight: bold; /* Gras pour le texte */
+}
+
+.search-bar {
+  display: flex; /* Utilise un conteneur flex pour la barre de recherche */
+}
+
+.search-bar input {
+  padding: 8px; /* Espace interne pour le champ de saisie */
+  font-size: 1rem; /* Taille de la police */
+  border-radius: 4px; /* Coins arrondis */
+  border: none; /* Pas de bordure */
+}
+
+.search-bar button {
+  padding: 8px 12px; /* Espacement interne du bouton */
+  font-size: 1rem; /* Taille de la police */
+  color: #fff; /* Couleur du texte */
+  background-color: #005bb5; /* Couleur de fond */
+  border: none; /* Pas de bordure */
+  border-radius: 4px; /* Coins arrondis */
+  cursor: pointer; /* Curseur en main au survol */
+}
+
+.auth-buttons button {
+  margin-right: 30px; /* Espacement à droite */
+  margin-left: -20px; /* Espacement à gauche */
+  padding: 10px 20px; /* Espacement interne */
+  font-size: 1rem; /* Taille de la police */
+  color: #0073e6; /* Couleur du texte */
+  background-color: #fff; /* Couleur de fond */
+  border: 1px solid #0073e6; /* Bordure bleue */
+  border-radius: 4px; /* Coins arrondis */
+  cursor: pointer; /* Curseur en main au survol */
+}
+
+/* Logo et autres éléments du header */
+.header .logo {
+  font-size: 2rem; /* Taille du texte */
+  font-weight: bold; /* Texte en gras */
+  text-align: center; /* Centrer le texte */
+  margin-top: 20px; /* Espacement en haut */
+}
+
+/* TITRE PRINCIPAL */
+h1.main-title {
+  text-align: center; /* Centre le texte */
+  margin: 20px 0; /* Espacement en haut et en bas */
+  font-size: 2rem; /* Taille de la police */
+  color: #444; /* Couleur du texte */
+}
+
+/* Conteneur des cartes */
+.container {
+  display: grid; /* Utilise la grille pour disposer les cartes */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colonnes adaptatives */
+  gap: 20px; /* Espacement entre les éléments */
+  padding: 20px; /* Espacement interne */
+}
+
+/* Carte */
+.card {
+  perspective: 1200px; /* Effet de perspective 3D */
+  position: relative; /* Contrôle la position */
+  z-index: 1; /* Z-index initial */
+}
+
+.card-inner {
+  position: relative; /* Position relative */
+  width: 100%; /* Largeur totale */
+  height: 380px; /* Hauteur de la carte */
+  transform-style: preserve-3d; /* Garde la perspective 3D */
+  transition: transform 0.6s ease, z-index 0.6s ease; /* Transition douce */
+}
+
+.card:hover {
+  z-index: 100; /* Passe la carte au premier plan */
+  transform: translateY(-20px); /* Déplace la carte vers le haut au survol */
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg); /* Rotation de la carte */
+}
+
+/* Face avant */
+.card-front, .card-back {
+  position: absolute; /* Position absolue pour les faces */
+  top: 0; /* Alignement en haut */
+  left: 0; /* Alignement à gauche */
+  width: 100%; /* Largeur totale */
+  height: 100%; /* Hauteur totale */
+  backface-visibility: hidden; /* Masque la face arrière lors de la rotation */
+  border: 1px solid #ccc; /* Bordure légère */
+  border-radius: 10px; /* Coins arrondis */
+  overflow: hidden; /* Empêche le débordement */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre autour de la carte */
+}
+
+.card-front .front-image-container {
+  position: relative; /* Position relative pour l'image */
+  text-align: center; /* Centre l'image */
+  height: 100%; /* Hauteur totale */
+}
+
+.card-front img {
+  width: 100%; /* Largeur totale de l'image */
+  height: 100%; /* Hauteur totale de l'image */
+  object-fit: cover; /* Remplit l'espace sans déformer l'image */
+  border-radius: 10px; /* Coins arrondis */
+}
+
+.card-front h3 {
+  position: absolute; /* Position absolue pour le titre */
+  bottom: 10px; /* Alignement en bas */
+  left: 10px; /* Alignement à gauche */
+  color: #fff; /* Texte blanc */
+  background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+  padding: 5px 10px; /* Espacement interne */
+  border-radius: 4px; /* Coins arrondis */
+}
+
+/* Face arrière */
+.card-back {
+  background-color: #fff; /* Couleur de fond blanche */
+  transform: rotateY(180deg); /* Rotation de la face arrière */
+  display: flex; /* Utilisation de flexbox pour l'alignement */
+  flex-direction: column; /* Organise les éléments en colonne */
+  align-items: center; /* Centre les éléments horizontalement */
+  justify-content: space-between; /* Espace égal entre les éléments */
+  text-align: center; /* Texte centré */
+  padding: 20px; /* Espacement interne */
+  z-index: 100; /* Z-index pour garder la face au-dessus */
+  position: relative; /* Position relative */
+}
+
+/* Style de l'image de la face arrière */
+.card-back img {
+  width: 180px; /* Largeur de l'image */
+  height: 180px; /* Hauteur de l'image */
+  border-radius: 50%; /* Coins arrondis pour une forme circulaire */
+}
+
+.card-back h4 {
+  font-size: 1.2rem; /* Taille de la police */
+  margin-bottom: 10px; /* Espacement en bas */
+  color: #0073e6; /* Couleur bleue */
+}
+
+.card-back p {
+  font-size: 0.9rem; /* Taille de la police */
+  margin-bottom: 5px; /* Espacement en bas */
+}
+
+/* Bouton Acheter */
+.card-back .buy-button {
+  margin-top: auto; /* Place le bouton en bas */
+  align-self: center; /* Centre le bouton horizontalement */
+  padding: 8px 16px; /* Espacement interne */
+  font-size: 1rem; /* Taille de la police */
+  color: #fff; /* Texte blanc */
+  background-color: #0073e6; /* Fond bleu */
+  border: none; /* Pas de bordure */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur en main au survol */
+  transition: background-color 0.3s ease; /* Transition douce pour le fond */
+}
+
+.card-back .buy-button:hover {
+  background-color: #005bb5; /* Changement de couleur au survol */
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #0073e6;
+  color: #fff;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+    background-color: lightgray;
+  }
+}
+
+
