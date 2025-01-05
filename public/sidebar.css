@@ -1,0 +1,705 @@
+*{
+    margin: 0;
+    padding:0;
+    
+
+}
+body{
+    background-image: url(./imd.jpeg);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+.navmenu{
+background-color: rgb(20, 24, 20);
+height: 3rem;
+} 
+
+}
+.navmenu
+ li{
+   
+   list-style: none;
+}
+.navmenu ul{
+   display: flex;
+  
+   justify-content: space-evenly;
+   color: white;
+   font-size: 1.3rem;
+   padding-top: 0.7rem;
+}
+.hom,.navmenu li:hover{
+    background-color: rgb(108, 106, 106);
+    width: 12.3rem;
+    height: 2.4rem;
+    padding: 0.2rem;
+    margin-top: -0.5rem;
+    border-radius: 0.15rem;
+    padding-left: 2.1rem;
+    
+}
+.li1{
+    display: none;
+}
+.navmenu ul li:hover .li1{
+    display: block;
+    position: absolute;
+    background-color:  rgb(77, 79, 77);
+    margin-top: 0.7srem;
+    margin-left: -2.2rem;
+    
+}
+.navmenu ul li:hover .li1 ul {
+   
+       display: block;
+       padding-left: 1rem;
+       padding-bottom: 1.8rem;
+       padding-right: 1rem;
+       
+    
+    }    
+
+    .li1 a{
+      text-decoration: none;
+  }
+  
+
+    .navmenu ul li:hover a{
+        color: white;
+    }
+
+    .navmenu ul li:hover .li1 ul li{
+        width: 170px;
+        padding: 17px;
+        border-bottom: 1px dotted white;
+       
+        background: transparent;
+
+    }
+    .navmenu ul li:hover .li1 ul li:last-child{
+        border-bottom: none;
+    }
+    .navmenu ul li:hover .li1 ul li:hover{
+        color: rgb(94, 96, 94);
+    }
+
+
+
+
+   
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+
+
+
+
+
+    .li2{
+        display: none;
+    }
+   
+  
+  
+
+    .hoverme:hover .li2{
+        display: block;
+        position: absolute;
+        background-color:  rgb(74, 79, 74);
+        margin-left: 11.5rem;
+        margin-top: -2rem;
+       
+
+    }
+    .hoverme .li2 ul {
+      padding-left: 1rem;
+      padding-bottom: 1rem;
+      padding-right: 1rem;
+  }
+  
+  .hoverme .li2 ul li {
+      width: 170px;
+      padding: 17px;
+      border-bottom: 1px dotted white;
+      background: transparent;
+  }
+  
+  .hoverme .li2 ul li:last-child {
+      border-bottom: none;
+  }
+  
+  .hoverme .li2 ul li:hover {
+      color: rgb(94, 96, 94);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    .navd{
+        display: flex;
+        
+    }
+    .navd p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        margin-top: 0rem;
+        
+        background-color: rgb(65, 64, 61);
+        width: 7rem;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    
+    
+    }
+
+    .glob{
+    
+        display: flex ;
+        justify-content: space-between;
+        margin-top: 10rem;
+        margin-left: 4.5rem;
+        margin-right: 4.5rem;
+    }
+    .content{
+      margin-bottom: 5rem;
+    }
+
+  
+    .content h2 {
+      
+        color: rgb(227, 227, 227);
+        font-size: 4.5rem;
+        padding-bottom: 0.3rem;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        margin-bottom: 2.5rem;
+    }
+    .content span{
+        color: orange;
+
+    }
+    .content p{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: white;
+        font-size: 2rem;
+        padding-bottom: 1rem;
+        margin-bottom: 2.1rem;
+    }
+    .content button{
+        padding-left: 3.3rem;
+        padding-right: 3.3rem;
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        border-radius: 0.7rem;
+        background-color: orange;
+        text-transform: uppercase;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 1.2rem;
+    }
+    .content button:hover{
+        background-color: white;
+    }
+    
+    .cadre{
+       padding-top:4.2rem ;
+        background-color: rgb(36, 33, 33);
+        border-radius: 0.35rem;
+        width: 25rem;
+        height: 36rem;
+        margin-top: -1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        
+    }
+
+
+    .cadre button{
+        height: 3rem;
+        width: 22rem;
+        margin-left: 1.3rem;
+        padding: 1.5rem;
+        PADDING-BOTTOM: 2.5REM;
+        
+        
+        background: white;
+        color: orange;
+        font-size: 1.4rem;
+        font-weight: bold;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+        
+        
+        
+        }
+        .cadre .but{
+            background-color: orange;
+            color: black;
+           
+           
+        }
+        .cadre .but:hover{
+            background-color: white;
+            color: black;
+           
+           
+        }
+        .cadre input{
+            border: none;
+            background-color: rgb(36, 33, 33);
+            padding-bottom:0.5rem ;
+            margin-left: 1.3rem;
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            border-bottom: 0.1px solid orange;
+           
+            width: 22rem;
+        }
+        .cadre p{
+            text-align: center;
+            color: white;
+            font-size: 1.3rem;
+        }
+        .cadre p:last-child{
+            font-size: 1.1rem;
+            margin-top: 1.1rem;
+        }
+        .cadre span{
+            color: orange;
+          
+        }
+        .logoinsta{
+            display: flex;
+            justify-content: center;
+            
+            gap: 2.2rem;
+            color: white;
+            padding-top: 1rem;
+            padding-bottom: 2.5rem;
+            font-size: 1.9rem;
+        }
+        i:hover{
+            color: orange;
+        }         
+
+
+
+
+
+        /* Style de la zone de suggestions */
+.suggestions {
+    position: absolute;
+    background-color: #504d4d;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    border: 1px solid #504d4d;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  /* Style pour chaque élément de suggestion */
+  .suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Changer la couleur de fond au survol */
+  .suggestion-item:hover {
+    background-color: #ddd;
+  }
+  
+  /* Ajustement de l'espace autour de l'input */
+  .navd {
+    position: relative;
+    width: 300px;
+  }
+  
+  #searchInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section d'introduction */
+.intro {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.intro .highlight {
+  color: #ff4b5c;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: white;
+}
+
+/* Section des fonctionnalités */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h2 {
+  font-size: 1.5rem;
+  color: #2a2a72;
+}
+
+
+.feature-card p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #666;
+}
+
+/* Section des services avancés */
+.advanced-services {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.advanced-services h1 {
+  font-size: 2rem;
+  color:white;
+}
+
+.advanced-services .highlight {
+  color: #ff4b5c;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.service-card h2 {
+  font-size: 1.5rem;
+  color: #2a2a72;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #666;
+  margin: 1rem 0;
+}
+
+.service-card .btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff4b5c;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.service-card .btn:hover {
+  background-color: #e63a47;
+}
+
+/* Section avec image */
+.image-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS */
+.footer {
+    background-color: #121212;
+    color: #B0B0B0;
+    padding: 2rem 2rem; /* Reduced padding for a smaller height */
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+  }
+  
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
+    gap: 2rem;
+  }
+  
+  .footer h3, .footer h4 {
+    color: #FCA311;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+  }
+  
+  .footer p, .footer a {
+    font-size: 0.85rem;
+    color: #B0B0B0;
+    text-decoration: none;
+    line-height: 1.5;
+  }
+  
+  .footer a:hover {
+    color: #FCA311;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer ul li {
+    margin-bottom: 0.6rem;
+  }
+  
+  .footer-contact .social-icons a {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    color: #B0B0B0;
+  }
+  
+  .footer-contact .social-icons a:hover {
+    color: #FCA311;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.75rem;
+    color: #888888;
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+  }
+  
+  .footer-bottom a {
+    color: #FCA311;
+  }
+  
+  .footer-bottom a:hover {
+    color: #B0B0B0;
+  }
+  
+
+  .cadre a{
+    color: orange;
+    border-bottom: none;
+    text-decoration: none;
+  }
+
+  /* Media Queries pour le responsive */
+
+/* Tablettes et écrans plus petits */
+@media (max-width: 1024px) {
+  .glob {
+      flex-direction: column;
+      margin: 5rem 1.5rem;
+      
+  }
+
+  .content h2 {
+      font-size: 3.5rem;
+  }
+
+  .content p {
+      font-size: 1.8rem;
+  }
+.content{
+  margin-bottom: 5rem;
+}
+  .cadre {
+      width: 90%;
+      height: auto;
+      
+  }
+  .cadre button{
+    width: 90%;
+  }
+  .cadre input{
+    width: 90%;
+  }
+
+  .footer-container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+  }
+
+  
+
+  .navmenu{
+    margin-bottom: 40rem;
+    margin-left: -10rem;
+   
+  }
+  .navmenu ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .navmenu ul li {
+      width: 50%;
+      text-align: center;
+      padding: 1rem;
+  }
+
+  .navd {
+      width: 100%;
+      margin-top: 1rem;
+      justify-content: center;
+      margin-top: 15rem;
+     
+  }
+
+  .navd .suggestions{
+    margin-left: 20rem;
+    margin-top: 2rem;
+  }
+
+  .navd input {
+      width: 80%;
+      margin: 0 auto;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 768px) {
+  .glob {
+      margin: 4rem 1rem;
+  }
+
+  .content h2 {
+      font-size: 2.5rem;
+  }
+
+  .content p {
+      font-size: 1.6rem;
+  }
+  .content{
+    margin-top: 10rem;
+  }
+
+  .cadre {
+      width: 90%;
+      margin: 0 auto;
+      height: auto;
+  }
+
+  .footer-container {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+  }
+
+  .navmenu ul {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 1rem;
+  }
+
+  .navmenu ul li {
+      width: 100%;
+      padding: 1rem;
+      text-align: center;
+  }
+
+  .logoinsta {
+      gap: 1.2rem;
+  }
+}
