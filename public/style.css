@@ -1,79 +1,152 @@
-/* Style général */
+/* 🎯 Style Global */
 body {
-    font-family: Arial, sans-serif; /* Définit la police du texte, avec Arial comme priorité et sans-serif en secours */
-    background-color: #f9f9f9; /* Définit une couleur de fond gris clair */
-    margin: 0; /* Supprime les marges externes par défaut */
-    padding: 0; /* Supprime les espacements internes par défaut */
-    text-align: center; /* Aligne tout le contenu du corps horizontalement au centre */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    text-align: center;
 }
 
+/* 🎓 En-tête */
 header {
-    background-color: #213766; /* Applique une couleur de fond verte à l'en-tête */
-    color: white; /* Définit la couleur du texte en blanc */
-    padding: 15px 0; /* Ajoute un espacement vertical de 15 pixels au contenu */
+    background: linear-gradient(135deg, #213766, #2f4e85);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
 }
 
-h1 {
-    font-size: 2.5rem; /* Définit une taille de police de 2.5 fois la taille par défaut (40px si rem = 16px) */
-    margin: 0; /* Supprime les marges externes autour du titre */
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
 
-/* Container des produits */
+/* 🎥 Vidéo en arrière-plan avec texte */
+.header-video {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 400px; /* Ajustez la hauteur selon vos besoins */
+    background: black;
+}
+
+.header-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 📝 Texte centré sur la vidéo */
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.video-overlay h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.video-overlay p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* 🎭 Effet sombre sur la vidéo pour une meilleure lisibilité du texte */
+.header-video::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Ajustez l'opacité pour un effet plus sombre */
+    z-index: 1;
+}
+
+/* 🛍️ Section Produits */
 .product-container {
-    display: flex; /* Utilise le modèle Flexbox pour organiser les éléments enfants */
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
-    justify-content: center; /* Centre les éléments horizontalement */
-    padding: 20px; /* Ajoute un espacement interne de 20 pixels autour du conteneur */
-    gap: 20px; /* Ajoute un espace de 20 pixels entre les éléments */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px;
 }
 
-/* Carte produit */
+/* 🗂️ Carte Produit */
 .product-card {
-    background-color: #fff; /* Définit un fond blanc pour chaque carte */
-    border: 1px solid #ddd; /* Ajoute une bordure grise claire d'une largeur de 1 pixel */
-    border-radius: 8px; /* Arrondit les coins de la carte avec un rayon de 8 pixels */
-    padding: 20px; /* Ajoute un espacement interne de 20 pixels */
-    width: 250px; /* Définit une largeur fixe de 250 pixels */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre subtile avec 10px de flou */
-    text-align: center; /* Centre horizontalement le contenu textuel */
-    transition: transform 0.3s, box-shadow 0.3s; /* Ajoute une transition fluide pour la transformation et l'ombre */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Images des produits */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
 .product-card img {
-    width: 100%; /* L'image occupe toute la largeur de son conteneur */
-    height: 200px; /* Définit une hauteur fixe de 200 pixels */
-    object-fit: cover; /* Recadre l'image pour remplir l'espace sans déformation */
-    border-radius: 8px; /* Applique un arrondi aux coins de l'image */
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
 }
 
-/* Informations sur le produit */
 .product-info {
-    margin-top: 10px; /* Ajoute un espacement vertical de 10 pixels au-dessus des informations */
+    padding: 15px;
+}
+
+.product-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
 .product-info p {
-    margin: 8px 0; /* Ajoute un espacement de 8 pixels verticalement autour de chaque paragraphe */
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #555;
 }
 
-/* Bouton d'achat */
+/* 🛒 Bouton Achat */
 .purchase-button {
-    background-color: #7878fc; /* Définit une couleur de fond verte pour le bouton */
-    color: white; /* Définit la couleur du texte en blanc */
-    padding: 12px 20px; /* Ajoute un espacement interne de 12 pixels vertical et 20 pixels horizontal */
-    border: none; /* Supprime la bordure par défaut */
-    border-radius: 5px; /* Arrondit les coins avec un rayon de 5 pixels */
-    cursor: pointer; /* Change le curseur en main lors du survol du bouton */
-    margin-top: 15px; /* Ajoute un espacement vertical de 15 pixels au-dessus du bouton */
-    font-size: 1rem; /* Définit une taille de police de 16 pixels (1rem) */
+    background: #5e05b7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
 }
 
 .purchase-button:hover {
-    background-color: #282591; /* Change la couleur de fond du bouton en un vert plus foncé au survol */
+    background: #0e093c;
 }
 
-/* Effet de survol sur la carte produit */
-.product-card:hover {
-    transform: scale(1.05); /* Agrandit légèrement la carte (5 %) lorsqu'elle est survolée */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Accentue l'ombre pour renforcer l'effet de relief */
+/* 📝 Pied de page */
+footer {
+    background-color: #213766;
+    color: white;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
