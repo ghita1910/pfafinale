@@ -172,10 +172,9 @@ h1, h2, h3 {
   color: #333;
 }
 
-/* Media Queries for Responsiveness */
 @media (max-width: 1024px) {
   .card-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 cartes par ligne sur tablette */
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
