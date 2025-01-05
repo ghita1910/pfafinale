@@ -99,7 +99,7 @@ header a:hover, header button:hover {
   width: 100%;
   margin-top: 20px;
   padding: 20px;
-  margin-left: 150px;
+  margin: auto;
 }
 
 /* Style des cartes */
