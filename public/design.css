@@ -88,7 +88,7 @@ h1, h2, h3 {
   padding: 20px;
   text-align: center;
   flex-grow: 1; /* Laisser le contenu prendre l'espace restant */
-  margin-left: 120px;
+  margin: auto;
 }
 
 .card-grid {
