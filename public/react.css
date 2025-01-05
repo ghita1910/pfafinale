@@ -31,7 +31,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000; /* Assure que la navbar reste au-dessus des autres éléments */
+  z-index: 1000; 
 }
 
 header h1 {

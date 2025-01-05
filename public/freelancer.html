@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="freelancer.css">
+</head>
+<body>
+  <div class="background"></div>
+  <div class="signup-card">
+    <div class="welcome-section">
+      <i class="fa-solid fa-user-plus welcome-icon"></i>
+      <h2>Welcome to Our Platform!</h2>
+      <p>Please select your role to proceed.</p>
+    </div>
+    <form action="#" method="POST" class="role-form">
+      <!-- Selection de Role -->
+      <div class="form-group">
+        <label for="role"><i class="fa-solid fa-briefcase"></i> Select Your Role</label>
+        <select id="role" name="role" required>
+          <option value="">Choose your role</option>
+          <option value="freelancer">Freelancer</option>
+          <option value="client">Client</option>
+        </select>
+      </div>
+      
+      <!-- Informations supplémentaires -->
+      <div id="additional-info" class="form-group" style="display: none;">
+        <label for="additional-info-field">Provide Details</label>
+        <input type="text" id="additional-info-field" name="additional-info" placeholder="Tell us more about your role" required>
+      </div>
+
+      <!-- Bouton de soumission -->
+      <button type="submit" class="btn-submit">Continue</button>
+    </form>
+    <p class="login-option">Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+
+  <script>
+    const roleSelect = document.getElementById('role');
+    const additionalInfo = document.getElementById('additional-info');
+
+    roleSelect.addEventListener('change', function() {
+      if (roleSelect.value !== '') {
+        additionalInfo.style.display = 'block';
+      } else {
+        additionalInfo.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
