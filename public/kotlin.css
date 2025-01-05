@@ -235,7 +235,10 @@ footer p {
   
 }
 
-
+ h3 a {
+  text-decoration: none;
+  color: black
+}
  .oo i{
   color: black;
   margin-left: 38%;
