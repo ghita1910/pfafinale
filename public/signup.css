@@ -1,0 +1,168 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: url('appmob.jpg') no-repeat center center fixed; /* Ajoutez votre image ici */
+  background-size: cover; /* Cela couvre toute la page */
+}
+
+/* Background overlay (optionnel, pour assombrir un peu l'arrière-plan) */
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Ombre noire semi-transparente */
+  z-index: -1;
+}
+
+/* Signup Card */
+.signup-card {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.7); /* Ajustez l'opacité ici (0.7 = 70% opaque) */
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  margin-left: 35%;
+  margin-top: 2rem;
+  margin-right: 43rem;
+}
+
+/* Welcome Section */
+.welcome-section {
+  margin-bottom: 2rem;
+}
+
+.welcome-icon {
+  font-size: 3rem;
+  color: #6a11cb;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.welcome-section p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Form */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #555;
+}
+
+label i {
+  margin-right: 0.5rem;
+  color: #6a11cb;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: #6a11cb;
+  outline: none;
+  box-shadow: 0 0 5px rgba(106, 17, 203, 0.4);
+}
+
+select {
+  appearance: none;
+  background-color: white;
+  cursor: pointer;
+  width: 107%;
+}
+
+/* Submit Button */
+.btn-submit {
+  background: linear-gradient(120deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 15px rgba(106, 17, 203, 0.3);
+}
+
+/* Login Option */
+.login-option {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.login-option a {
+  color: #6a11cb;
+  text-decoration: none;
+}
+
+.login-option a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .signup-card {
+    padding: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .welcome-section p {
+    font-size: 0.8rem;
+  }
+}
