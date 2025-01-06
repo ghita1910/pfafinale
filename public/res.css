@@ -1,82 +1,63 @@
-/* Reset de base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Mise en page du body */
+/* Ajustement global */
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #ff7e5f, #feb47b);
     color: #333;
     line-height: 1.6;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     min-height: 100vh;
-    background-size: cover;
+    margin: 0;
 }
 
-/* Style du header */
+/* Header */
 header {
     background: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 50px 0;
+    padding: 20px 0;
     width: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    top: 0;
-}
-
-header .container {
-    width: 80%;
-    margin: 0 auto;
+    height: 10%;
     text-align: center;
+    position: fixed;
+    margin-bottom: 30rem;;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
-
-header h1 {
-    font-size: 3em;
-    font-weight: bold;
-    text-transform: uppercase;
+main .reservation-container{
+   padding-bottom: -30rem;
+   
 }
-
-header p {
-    font-size: 1.2em;
-    margin-top: 10px;
-}
-
-/* Style du main */
+/* Ajout d'un padding pour compenser la hauteur du header */
 main {
+    padding-top: 100px; /* Hauteur approximative du header */
+    margin-bottom: 50px; /* Espace au-dessus du footer */
     background-color: white;
-    width: 100%;
+    width: 90%;
     max-width: 700px;
     padding: 30px;
-    margin: 100px 0 20px;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    position: relative;
-    z-index: 1;
-    transition: all 0.3s ease;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 15rem;
 }
 
-main:hover {
-    transform: translateY(-5px);
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    margin-top: auto; /* Place le footer en bas */
 }
 
-/* Texte de description */
-.description {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    color: #666;
-}
-
-/* Formulaire de réservation */
+/* Formulaire */
 .reservation-form {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
 }
 
 .input-group {
@@ -85,77 +66,41 @@ main:hover {
 }
 
 .input-group label {
-    font-size: 1.1em;
-    color: #555;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .input-group input {
-    width: 100%;
-    padding: 15px;
-    font-size: 1em;
-    border: 2px solid #eee;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.input-group input:focus {
-    border-color: #ff7e5f;
-    box-shadow: 0 0 8px rgba(255, 126, 95, 0.5);
-    outline: none;
-}
-
-
-/* Bouton de soumission */
 .submit-button {
-    padding: 15px;
-    font-size: 1.2em;
     background: linear-gradient(135deg, #ff7e5f, #feb47b);
     color: white;
+    padding: 10px;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.3s ease, background 0.3s ease;
+    font-size: 1em;
 }
 
 .submit-button:hover {
     background: linear-gradient(135deg, #feb47b, #ff7e5f);
-    transform: scale(1.05);
 }
 
-.submit-button:active {
-    transform: scale(1);
-}
+/* Responsive */
+@media (max-width: 480px) {
+    main {
+        padding-top: 120px; /* Ajustement pour écrans plus petits */
+    }
 
-/* Footer fixé en bas */
-footer {
-    text-align: center;
-    padding: 15px;
-    background-color: #333;
-    color: white;
-    font-size: 1em;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
-
-@media screen and (max-width: 480px) {
     header h1 {
-        font-size: 1.6em;
-    }
-
-    .reservation-container {
-        width: 90%;
-    }
-
-    .reservation-form .input-group input {
-        padding: 10px;
+        font-size: 1.5em;
     }
 
     .submit-button {
         font-size: 0.9em;
-        padding: 10px;
     }
 }
