@@ -1,13 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
   // Tableau des suggestions d'auto-complétion
   const suggestionsData = [
-    "Développement Web","analogElectronics","Electronique de telecomunication","Sécurité Électronique","bon_commande","Graphims & Design", "Logo & Brand Identity", "Logo Design", "Graphic Charts", "Business Card & Stationery",
+    "Développement Web","Analogique et Numérique","Electronique Intelligente IoT","Video & Animation,"Video Editing","Telecomunication",
+,"Sécurité Électronique","Bon commande","Graphims & Design", "Logo & Brand Identity", "Logo Design", "Graphic Charts", "Business Card & Stationery",
     "Digital Graphics", "Website Design", "Social Media Graphics", "Banner & AD Design", "Advanced & Specialized Graphics",
     "Motion Graphics & Specialized", "3D Design & Modeling", "Photo Editing & Retouching", "Accessibilité Web",
     "Responsive Design", "Design Adaptatif", "Mobile-First", "Grilles CSS", "Frameworks et Bibliothèques",
     "React", "Vue.js", "Angular", "Bootstrap", "Tailwind CSS", "Electronique", "Serveurs", "Bases de Données",
     "Sécurité Électronique", "Électronique Intelligent & IoT", "Support & Cybersécurité", "Firewall", "Cryptographie",
-    "Consultation en cyber", "Gestion et management", "Test d'intrusion", "VPN", "Services de conformité",
+    "Consultation en cyber", "Gestion et management", "Test d'intrusion", "Services de conformité",
     "Dev Mobile", "Testing","Devops", "Android", "Java", "Kotlin", "Android SDK", "Firebase", "Material Design", "UI Designing"
   ];
 
