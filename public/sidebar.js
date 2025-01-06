@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
   // Tableau des suggestions d'auto-complétion
   const suggestionsData = [
-    "Développement Web","Analogique et Numérique","Electronique Intelligente IoT","Video & Animation,"Telecomunication",
+    "Développement Web","Analogique et Numérique","Electronique Intelligente IoT","Video & Animation",
  "Bon commande","Graphims & Design", "Logo & Brand Identity", "Logo Design", "Graphic Charts", "Business Card & Stationery",
     "Digital Graphics", "Website Design", "Social Media Graphics", "Banner & AD Design", "Advanced & Specialized Graphics",
     "Motion Graphics & Specialized", "3D Design & Modeling", "Photo Editing & Retouching", "Accessibilité Web",
